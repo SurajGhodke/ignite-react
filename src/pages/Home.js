@@ -8,8 +8,12 @@ import { motion } from "framer-motion";
 //components
 import Game from "./../components/Game";
 import GameDetail from "./../components/GameDetail";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+  //get the current location
+  const location = useLocation();
+  const pathId = location.pathname.split("/")[2];
   //fetch games
   const dispatch = useDispatch();
   useEffect(() => {
@@ -20,7 +24,7 @@ const Home = () => {
 
   return (
     <GameList>
-      <GameDetail />
+      {pathId && <GameDetail />}
       <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (
