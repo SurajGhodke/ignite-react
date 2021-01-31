@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle` 
     *{
         margin: 0;
         padding: 0;
@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle`
         }
         &::-webkit-scrollbar-thumb {
             background-color: darkgray;
+        }
+        &::-webkit-scrollbar-track {
+            background: white;
         }
     }
     body {
@@ -27,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
     h3 {
         font-size: 1.3rem;
         color: #333;
-        padding: 1.5rem;
+        padding: 1.5rem 0rem;
     }
     p{
         font-size: 1.2rem;
